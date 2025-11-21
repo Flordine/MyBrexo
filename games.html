@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeux</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🎮 Arcade</div>
+        <ul>
+            <li><a href="index.html">⬅ Accueil</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Zone de Jeux Éducatifs</h1>
+        
+        <div class="grid" id="games-list">
+            <div class="card fun" onclick="startSnake()">
+                <span class="card-icon">🐍</span>
+                <h3>Le Snake</h3>
+                <p>Mange les pommes, évite les murs !</p>
+                <button class="btn">Jouer maintenant</button>
+            </div>
+
+            <div class="card sciences">
+                <span class="card-icon">🧮</span>
+                <h3>Calcul Rapide</h3>
+                <p>(À venir...)</p>
+            </div>
+        </div>
+
+        <div id="game-container">
+            <h2 style="color: white;">🐍 Super Snake</h2>
+            <div id="score-board">Score : <span id="score">0</span></div>
+            
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <div class="game-controls">
+                Utilise les flèches du clavier ⬅️ ⬆️ ⬇️ ➡️ pour bouger.<br>
+                <button class="btn" onclick="location.reload()">Quitter / Rejouer</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/games/snake.js"></script>
+
+</body>
+</html>
