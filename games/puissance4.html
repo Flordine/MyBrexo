@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Puissance 4 - Stratégie</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        /* Le plateau bleu typique du Puissance 4 */
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(7, 60px); /* 7 colonnes */
+            grid-template-rows: repeat(6, 60px);    /* 6 lignes */
+            gap: 10px;
+            background-color: #0055ff; /* Bleu */
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: max-content;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* Les cases (trous) */
+        .cell {
+            width: 60px;
+            height: 60px;
+            background-color: white; /* Vide par défaut */
+            border-radius: 50%; /* Rond */
+            cursor: pointer;
+            border: 4px solid #0044cc;
+        }
+
+        /* Couleurs des joueurs */
+        .cell.red { background-color: #ff4444; }
+        .cell.yellow { background-color: #ffbb00; }
+
+        #status {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🔴 Puissance 4 🟡</h1>
+        <a href="../index.html">← Retour à l'accueil</a>
+    </header>
+
+    <main>
+        <div id="status">Au tour du joueur : <span style="color:red">ROUGE</span></div>
+        
+        <div id="game-board"></div>
+        
+        <button onclick="game.reset()" style="margin-top:20px; padding: 10px 20px; font-size:18px;">Recommencer</button>
+    </main>
+
+    <script src="../js/Puissance4.js"></script>
+    <script>
+        const game = new Puissance4('game-board', 'status');
+    </script>
+</body>
+</html>
