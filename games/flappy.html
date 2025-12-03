@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird - Physique</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            overflow: hidden; /* Empêche de scroller avec la barre d'espace */
+        }
+        canvas {
+            border: 4px solid #fff;
+            background: #70c5ce; /* Couleur du ciel */
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .instructions {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🐦 Flappy Code</h1>
+        <a href="../index.html" style="color: #70c5ce;">← Retour à l'accueil</a>
+    </header>
+
+    <main>
+        <div id="score-display">Score: 0</div>
+        <canvas id="flappyCanvas" width="320" height="480"></canvas>
+        <p class="instructions">Appuie sur <strong>ESPACE</strong> ou <strong>CLIQUE</strong> pour voler !</p>
+    </main>
+
+    <script src="../js/FlappyGame.js"></script>
+    <script>
+        // Lancement du jeu
+        const flappy = new FlappyGame('flappyCanvas');
+    </script>
+</body>
+</html>
