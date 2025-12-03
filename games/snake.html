@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu du Snake - Apprentissage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Style spécifique pour centrer le jeu et le rendre joli */
+        body {
+            text-align: center;
+            background-color: #222; /* Fond sombre pour l'immersion */
+            color: white;
+        }
+        canvas {
+            border: 2px solid #4CAF50; /* Bordure verte */
+            box-shadow: 0 0 20px rgba(76, 175, 80, 0.5); /* Effet lumineux */
+            background-color: #000;
+            margin-top: 20px;
+        }
+        .score-board {
+            font-size: 24px;
+            margin: 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🐍 Code Snake</h1>
+        <a href="../index.html" style="color: #4CAF50;">← Retour aux cours</a>
+    </header>
+
+    <main>
+        <div class="score-board">Score : <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <p>Utilise les flèches du clavier pour jouer</p>
+    </main>
+
+    <script src="../js/SnakeGame.js"></script>
+    <script>
+        // On lance le jeu une fois la page chargée
+        const snakeGame = new SnakeGame('gameCanvas', 'score');
+    </script>
+
+</body>
+</html>
